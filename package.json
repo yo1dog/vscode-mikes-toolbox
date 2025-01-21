@@ -1,0 +1,38 @@
+{
+  "name": "mikes-toolbox",
+  "displayName": "Mike's Toolbox",
+  "description": "Collection of tools useful to me.",
+  "icon": "img/icon.png",
+  "version": "0.0.1",
+  "publisher": "yo1dog",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "author": "Mike \"yo1dog\" Moore",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./extension.js",
+  "browser": "./extension.js",
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "contributes": {
+    "commands": [
+      {"command":"yo1dog.mikes-toolbox.encodeURI", "title": "Encode URI"},
+      {"command":"yo1dog.mikes-toolbox.decodeURI", "title": "Decode URI"},
+      {"command":"yo1dog.mikes-toolbox.encodeBase64", "title": "Encode Base64"},
+      {"command":"yo1dog.mikes-toolbox.decodeBase64", "title": "Decode Base64"},
+      {"command":"yo1dog.mikes-toolbox.escapeSH", "title": "Escape SH"}
+    ]
+  },
+  "scripts": {
+    "lint": "eslint extension.js",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1"
+  }
+}

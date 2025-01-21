@@ -1,0 +1,6 @@
+.vscode/**
+.eslintrc.json
+.gitignore
+jsconfig.json
+img
+!img/icon.png
