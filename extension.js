@@ -9,6 +9,19 @@ module.exports = {
       'encodeBase64': () => transformSelectedText(text => btoa(text)),
       'decodeBase64': () => transformSelectedText(text => atob(text)),
       'escapeSH': () => transformSelectedText(text => `'${text.replaceAll(`'`, `'\\''`)}'`),
+      'encodeJSONString': () => transformSelectedText(text => JSON.stringify(text)),
+      'decodeJSONString': () => transformSelectedText(text => {
+        let val;
+        try {
+          val = JSON.parse(text);
+        } catch (err) {
+          throw new Error(`Invalid JSON: ${err.message}`);
+        }
+        if (typeof val !== 'string') {
+          throw new Error(`JSON value is not a string.`);
+        }
+        return val;
+      }),
     }).forEach(([key, cmd]) =>
       context.subscriptions.push(vscode.commands.registerTextEditorCommand(`yo1dog.mikes-toolbox.${key}`, cmd))
     );

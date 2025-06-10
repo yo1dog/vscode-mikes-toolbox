@@ -40,6 +40,14 @@
       {
         "command": "yo1dog.mikes-toolbox.escapeSH",
         "title": "Escape SH"
+      },
+      {
+        "command": "yo1dog.mikes-toolbox.encodeJSONString",
+        "title": "Encode JSON String"
+      },
+      {
+        "command": "yo1dog.mikes-toolbox.decodeJSONString",
+        "title": "Decode JSON String"
       }
     ],
     "grammars": [
