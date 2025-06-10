@@ -3,7 +3,7 @@
   "displayName": "Mike's Toolbox",
   "description": "Collection of tools useful to me.",
   "icon": "img/icon.png",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "yo1dog",
   "engines": {
     "vscode": "^1.96.0"
